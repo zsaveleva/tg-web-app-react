@@ -9,14 +9,15 @@ const StyledButton = styled('button')`
         border: none;
         outline: none;
         cursor: pointer;
+        border-radius: 7px;
     }
 `
 
-const Button = ({ onClick }) => {
+const Button = ({ onClick, children }) => {
   return (
-    <StyledButton
-      onClick={onClick}
-    />
+    <StyledButton onClick={onClick}>
+      {children}
+    </StyledButton>
   )
 }
 
